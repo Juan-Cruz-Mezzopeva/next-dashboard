@@ -1,14 +1,42 @@
-import React from 'react';
-import styles from "@/app/ui/home.module.css"
+import { BsArrowRight } from 'react-icons/bs';
+import Header from './components/Header';
 import { bebas } from './ui/fonts';
-
+import Image from 'next/image'
 const Home = () => {
     return (
-        <div>
-            <h1 className={`${bebas.className} ${styles.text}`}>comenzando la app!!</h1>   
-            <p className='p-10 text-white'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eaque minus pariatur molestiae, est praesentium alias? Rerum, libero tempore exercitationem harum numquam odio sunt, magni repellat, expedita quae delectus officia!</p>
+        <main className='flex min-h-screen flex-col'>
+            <Header />
+            <div className='mt-4 mx-auto flex grow flex-col gap-4 md:flex-row w-4/5'>
+                <div className='flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20'>
+                    <p className={`${bebas.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+                        <strong>Welcome to MezzoDEV</strong> Creation Dashboard NextJS
+                    </p>
+                    <a
+                        href="#"
+                        className='flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base'>
+                        <span>loging</span> <BsArrowRight />
+                    </a>
+                </div>
+                <div className='flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12'>
+                    <Image
+                        src="/hero-desktop.png"
+                        alt="Screenshots of the dashboard"
+                        width={1000}
+                        height={700}
+                        className='hiden md:block'
+                    />
+                     <Image
+                        src="/hero-mobile.png"
+                        alt="Screenshots of the dashboard mobile"
+                        width={560}
+                        height={620}
+                        className='block md:hiden'
+                    />
+ 
+                </div>
+            </div>
 
-        </div>
+        </main>
     );
 };
 
