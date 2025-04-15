@@ -25,14 +25,14 @@ const Home = () => {
                         height={700}
                         className='hiden md:block'
                     />
-                     <Image
+                    <Image
                         src="/hero-mobile.png"
                         alt="Screenshots of the dashboard mobile"
                         width={560}
                         height={620}
                         className='block md:hiden'
                     />
- 
+
                 </div>
             </div>
 
